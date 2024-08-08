@@ -352,43 +352,17 @@
         </div>
     </div>
 
-    <script src="luv.js"></script>
-    <!-- <script>
-
-        onload = () => {
-            const c = setTimeout(() => {
-            document.body.classList.remove("not-loaded");
-            clearTimeout(c);
-            }, 1000);
-        };
-
-    </script> -->
-        <script>
-
-            function bloomFlower() {
-                if (document.body.classList.contains('not-loaded')) {
-                    document.body.classList.remove("not-loaded");
-                    document.querySelector('.reloadBtn').textContent = 'Reload Page';
-                } else {
-                  location.reload();
-                }
+   <script src="luv.js"></script>
+    <script>
+        function bloomFlower() {
+            if (document.body.classList.contains('not-loaded')) {
+                document.body.classList.remove("not-loaded");
+                document.querySelector('.reloadBtn').textContent = 'Reload Page';
+            } else {
+                location.reload();
             }
-      
-          </script>
-    <!-- <script>
-        // Tambahkan event listener ke tombol
-        document.getElementById('playButton').addEventListener('click', function() {
-            var audioElement = document.getElementById('myAudio');
-            audioElement.play().then(() => {
-                // Hilangkan overlay dan tampilkan konten utama
-                document.getElementById('overlay').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-                console.log('Audio is playing');
-            }).catch((error) => {
-                console.log('Error occurred:', error);
-            });
-        });
-    </script> -->
+        }
+    </script>
     <script>
         // Event listener untuk tombol play
         document.getElementById('playButton').addEventListener('click', function() {
