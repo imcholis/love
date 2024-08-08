@@ -361,33 +361,32 @@
                 location.reload();
             }
         }
-    </script>
-    <script>
+        
         // Event listener untuk tombol play
         document.getElementById('playButton').addEventListener('click', function() {
             var audioElement = document.getElementById('myAudio');
             var overlayElement = document.getElementById('overlay');
             var mainContentElement = document.getElementById('mainContent');
             var playButton = document.getElementById('buttonLuv');
-
+        
             // Memulai pemutaran audio
-            audioElement.play().then(() => {
+            audioElement.play().then(function() {
                 // Menambahkan kelas untuk efek zoom out
                 playButton.classList.add('zoom-out');
-
+        
                 // Setelah animasi selesai, tampilkan konten utama
-                setTimeout(() => {
+                setTimeout(function() {
                     overlayElement.style.opacity = '0'; // Memudar latar belakang
                     mainContentElement.style.display = 'block';
-
+        
                     // Menyembunyikan overlay setelah 1 detik
-                    setTimeout(() => {
+                    setTimeout(function() {
                         overlayElement.style.display = 'none';
                     }, 1000); // 1 detik (1000 ms) setelah transisi
                 }, 500); // Sesuai durasi transisi
-
+        
                 console.log('Audio is playing');
-            }).catch((error) => {
+            }).catch(function(error) {
                 console.log('Error occurred:', error);
             });
         });
